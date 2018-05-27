@@ -1,4 +1,4 @@
-(ns leiningen.new.pureclj
+(ns leiningen.new.pure-clj
   "Generates a pure-clj project"
   (:require [clojure.string :as s]
             [leiningen.core.main :as main]
@@ -6,7 +6,7 @@
                                              year project-name multi-segment
                                              sanitize-ns]]))
 
-(def render (renderer "pureclj"))
+(def render (renderer "pure-clj"))
 
 (defn capitalize-ns [namespace]
   (->> (s/split namespace #"\.")
@@ -23,9 +23,9 @@
     ["src/{{sanitized}}/Main.purs" (render "main.purs" data)]
     ["src/{{sanitized}}/Core.purs" (render "core.purs" data)]))
 
-(defn pureclj
+(defn pure-clj
   "Generates a Purescript (Clojure backend) project.
-  Ex.: lein new pureclj myproject `type`
+  Ex.: lein new pure-clj myproject `type`
   => generates a pure-clj project names myproject where type can be `app` or `lib` (default)"
   [name & [type]]
   (let [app? (= type "app")
