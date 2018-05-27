@@ -45,4 +45,5 @@
              (purs-entry app? data)
              "src-gen"
              "src-clj"
-             "resources")))
+             "resources")
+    (main/info "Make sure you have purs, pursclj and psc-package installed and in your path")))
