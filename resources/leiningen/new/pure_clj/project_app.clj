@@ -6,5 +6,10 @@
   :dependencies [[org.clojure/clojure "1.9.0"]]
   :source-paths ["src" "src-clj" "src-gen"]
   :target-path "target/%s"
+  :plugins [[lein-shell "0.5.0"]]
   :main ^:skip-aot {{namespace}}
-  :profiles {:uberjar {:aot :all}})
+  :profiles {:uberjar {:aot :all}}
+  :aliases {"pursclj" ["shell" "pursclj" "compile"
+                       "clj-output/**/*.purs"
+                       ".psc-package/**/src/**/*.purs"
+                       "-o" "src-gen"]})

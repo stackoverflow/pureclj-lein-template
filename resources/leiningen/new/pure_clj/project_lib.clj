@@ -5,4 +5,9 @@
             :url "https://www.eclipse.org/legal/epl-2.0/"}
   :dependencies [[org.clojure/clojure "1.9.0"]]
   :source-paths ["src" "src-clj" "src-gen"]
-  :repl-options {:init-ns {{namespace}}})
+  :plugins [[lein-shell "0.5.0"]]
+  :repl-options {:init-ns {{namespace}}}
+  :aliases {"pursclj" ["shell" "pursclj" "compile"
+                       "clj-output/**/*.purs"
+                       ".psc-package/**/src/**/*.purs"
+                       "-o" "src-gen"]})
