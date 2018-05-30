@@ -1,11 +1,22 @@
-# pureclj
+# pure-clj Leiningen new template
 
-Leiningen template for [pure-clj](https://github.com/stackoverflow/pure-clj),
+Leiningen new template for [pure-clj](https://github.com/stackoverflow/pure-clj),
 a Clojure backend for Purescript.
 
 ## Usage
 
-TODO
+Leiningen will download the template automatically so there's no need to install anything.
+
+    lein new pure-clj project-name type
+
+There are two types of projects one can create:
+
+- `app` for applications with a main.
+- `lib` for libraries. This is the default.
+
+Example:
+
+    lein new pure-clj myproject app
 
 ## License
 
