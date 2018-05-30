@@ -1,4 +1,4 @@
-(defproject pure-clj/lein-template "0.1.0-SNAPSHOT"
+(defproject pure-clj/lein-template "0.2.0"
   :description "leiningen `new` template to generate
  pure-clj (purescript Clojure backend) projects."
   :url "http://example.com/FIXME"

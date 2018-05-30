@@ -8,6 +8,6 @@
   :plugins [[lein-shell "0.5.0"]]
   :repl-options {:init-ns {{namespace}}}
   :aliases {"pursclj" ["shell" "pursclj" "compile"
-                       "clj-output/**/*.purs"
+                       "src/**/*.purs"
                        ".psc-package/**/src/**/*.purs"
                        "-o" "src-gen"]})

@@ -1,4 +1,4 @@
-module {{purs-name}}.Main where
+module Main where
 
 import Prelude
 import Effect (Effect)

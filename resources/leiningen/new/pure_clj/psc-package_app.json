@@ -1,0 +1,11 @@
+{
+    "name": "{{raw-name}}",
+    "set": "clj-0.1.0",
+    "source": "https://github.com/pure-clj/package-sets.git",
+    "depends": [
+        "console",
+        "effect",
+        "prelude"
+    ]
+  }
+  

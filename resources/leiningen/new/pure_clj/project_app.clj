@@ -7,9 +7,9 @@
   :source-paths ["src" "src-clj" "src-gen"]
   :target-path "target/%s"
   :plugins [[lein-shell "0.5.0"]]
-  :main ^:skip-aot {{namespace}}
+  :main ^:skip-aot Main._core
   :profiles {:uberjar {:aot :all}}
   :aliases {"pursclj" ["shell" "pursclj" "compile"
-                       "clj-output/**/*.purs"
+                       "src/**/*.purs"
                        ".psc-package/**/src/**/*.purs"
                        "-o" "src-gen"]})

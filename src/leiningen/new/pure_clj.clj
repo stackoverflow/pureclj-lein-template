@@ -18,6 +18,11 @@
     "project_app.clj"
     "project_lib.clj"))
 
+(defn psc-package-file [app?]
+  (if app?
+    "psc-package_app.json"
+    "psc-package_lib.json"))
+
 (defn purs-entry [app? data]
   (if app?
     ["src/{{sanitized}}/Main.purs" (render "main.purs" data)]
@@ -42,6 +47,7 @@
              ["README.md" (render "README.md" data)]
              [".gitignore" (render "gitignore" data)]
              ["LICENSE" (render "LICENSE" data)]
+             ["psc-package.json" (render (psc-package-file app?) data)]
              (purs-entry app? data)
              "src-gen"
              "src-clj"
