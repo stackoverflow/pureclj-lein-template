@@ -16,7 +16,15 @@ There are two types of projects one can create:
 
 Example:
 
+    # create project
     lein new pure-clj myproject app
+    cd myproject
+    # install purescript dependencies
+    psc-package install
+    # compile purescript
+    lein pursclj
+    lein run
+    => "Hello myproject"
 
 ## License
 
